@@ -61,13 +61,9 @@ _EMPLOYEE = [
     "leave.balance.view",
 ]
 
-_APPROVER = _EMPLOYEE + [
-    "leave.application.approve",
-]
+_APPROVER = [*_EMPLOYEE, "leave.application.approve"]
 
-_ADMIN = _APPROVER + [
-    "leave.balance.manage",
-]
+_ADMIN = [*_APPROVER, "leave.balance.manage"]
 
 ROLE_GRANTS = {
     "faculty": _EMPLOYEE,
